@@ -1,12 +1,16 @@
 <?php
 //conexion a la base de datos
-include "db_connect.php";
+require_once "database/db.php";
+
+$con = new ConexionBd();
+
+$conex = $con->conectar();
 
 //condicional
 
-    mysqli_query($connect, "DELETE  FROM estudiante WHERE identifiacion_estudiante='$_REQUEST[delete]'") or die ("problemas al eliminar el registro". mysqli_error($connect));
+    mysqli_query($conex, "DELETE  FROM estudiante WHERE identifiacion_estudiante='$_REQUEST[delete]'") or die ("problemas al eliminar el registro". mysqli_error($conex));
 
-    mysqli_close($connect);
+    mysqli_close($conex);
 
 ?>
             <div class = "alert alert-danger text-center mt-2">

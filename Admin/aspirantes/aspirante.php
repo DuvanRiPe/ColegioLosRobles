@@ -22,20 +22,7 @@ if (isset($rol) && $rol == 1){
 <body>
 
         <!-- header navbar -->
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <img src="../img/logo.png" width="100" alt="">
-            
-                <div class="card float-rigth " style="width: 10rem;">
-                    <div class="card-body text-center" >
-                        <h5 class="card-title"><?=$_SESSION['nombre_admin']?></h5>
-                        <a href="../logout.php" class="btn btn-dark">Cerrar Sesion</a>
-                    </div>
-                </div>
-            </div>
-            </nav>
-        </header>
+        <?php include_once '../components/header.php'; ?>
 
         <main class="container my-5">
 

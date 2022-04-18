@@ -1,6 +1,6 @@
 <?php
 //conexion a la base de datos
-require_once "database/db.php";
+require_once "../database/db.php";
 
 $con = new ConexionBd();
 
@@ -8,7 +8,7 @@ $conex = $con->conectar();
 
 //condicional
 
-    mysqli_query($conex, "DELETE  FROM profesor WHERE identificacion_profesor='$_REQUEST[delete]'") or die ("problemas al eliminar el registro". mysqli_error($conex));
+    mysqli_query($conex, "DELETE  FROM admin WHERE codigo_admin='$_REQUEST[delete]'") or die ("problemas al eliminar el registro". mysqli_error($conex));
 
     mysqli_close($conex);
 

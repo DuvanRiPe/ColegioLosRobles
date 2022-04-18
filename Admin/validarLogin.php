@@ -1,6 +1,10 @@
 <?php
 session_start();
-include "db_connect.php";
+require_once "database/db.php";
+
+$con = new ConexionBd();
+
+$conex = $con->conectar();
 
 
         $usuario = $_POST['usuario_admin'];
@@ -8,7 +12,7 @@ include "db_connect.php";
 
         $sql = "SELECT * FROM admin WHERE usuario_admin = '$usuario' AND contraseña_admin ='$contraseña' ";
 
-        $result = mysqli_query($connect, $sql);
+        $result = mysqli_query($conex, $sql);
 
         if ($row = mysqli_fetch_array($result)) {
             $_SESSION["codigo_rol"] = $row ["codigo_rol"];
