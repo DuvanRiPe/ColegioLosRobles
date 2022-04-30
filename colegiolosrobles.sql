@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-03-2022 a las 18:33:06
--- Versión del servidor: 10.4.19-MariaDB
--- Versión de PHP: 8.0.7
+-- Tiempo de generación: 27-04-2022 a las 22:56:37
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`codigo_admin`, `nombre_admin`, `usuario_admin`, `contraseña_admin`, `codigo_rol`) VALUES
-(1, 'Duvan Rivera Perez', 'Duvanadmin', '123', 1);
+(1, 'Duvan Rivera ', 'Duvanadmin', '123', 1);
 
 -- --------------------------------------------------------
 
@@ -62,6 +62,13 @@ CREATE TABLE `estudiante` (
   `telefono_estudiante` varchar(60) NOT NULL,
   `celular_estudiante` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estudiante`
+--
+
+INSERT INTO `estudiante` (`codigo_estudiante`, `nombre_estudiante`, `apellido_estudiante`, `edad`, `identifiacion_estudiante`, `correo_personal_estudiante`, `correo_institucional_estudiante`, `contraseña_estudiante`, `grado`, `direccion_estudiante`, `telefono_estudiante`, `celular_estudiante`) VALUES
+(11, '                        adasdas                    ', '                        asdasd                    ', 12, '13241', '                        adasda@gmailcom                    ', '', 0, '3', 'dasd', '', '');
 
 -- --------------------------------------------------------
 
@@ -135,13 +142,6 @@ CREATE TABLE `profesor` (
   `celular_profesor` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `profesor`
---
-
-INSERT INTO `profesor` (`codigo_profesor`, `nombre_profesor`, `apellido_profesor`, `edad_profesor`, `identificacion_profesor`, `correo_personal_profesor`, `correo_institucional_profesor`, `contrasena_profesor`, `grado_asignado`, `direccion_profesor`, `telefono_profesor`, `celular_profesor`) VALUES
-(1, 'fsd', 'eqwe', 12, '12321', 'ghsdfhgsgsh@gmail.com                    ', 'dadasdad@asds', 0, 'sdfsdf', 'fsd', 'fdsfs', 'fsdf');
-
 -- --------------------------------------------------------
 
 --
@@ -206,13 +206,13 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  MODIFY `codigo_estudiante` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `codigo_estudiante` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `preinscripcion`
 --
 ALTER TABLE `preinscripcion`
-  MODIFY `codigoAspirante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `codigoAspirante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas
